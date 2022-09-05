@@ -1,3 +1,7 @@
+const withPWA = require("next-pwa")({
+  dest: "public",
+})
+
 const nextConfig = {
   compiler: {
     styledComponents: true,
@@ -6,4 +10,4 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = nextConfig
+module.exports = withPWA(nextConfig)

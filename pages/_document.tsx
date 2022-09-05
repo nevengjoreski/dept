@@ -25,8 +25,12 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
             rel="stylesheet"
           />
+
           <link rel="icon" href="/favicon.ico" />
+          <link rel="manifest" href="/manifest.json" />
+          <link rel="apple-touch-icon" href="/img_1.png" />
           <meta name="description" content="Dept task" />
+          <meta name="theme-color" content="#fff" />
         </Head>
         <body>
           <Main />
