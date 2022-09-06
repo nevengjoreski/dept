@@ -8,21 +8,18 @@ import { ImageText } from "./ImageText"
 import { FC } from "react"
 import { IImageWithText } from "../types"
 
-export const ImageWithText: FC<IImageWithText> = ({ image }) => (
+export const ImageWithText: FC<IImageWithText> = ({ image, text }) => (
   <StyledImagePartWrapper>
     <StyledDivImageWrapper>
       <Image
         style={{ opacity: size.opacity }}
         src={image}
-        alt={"Image 3"}
-        layout={"fill"}
+        alt={"Image Alt"} // to be dynamic
+        layout="fill"
         objectFit="cover"
-        objectPosition={"right bottom"}
+        objectPosition="50% 50%"
       />
-      <ImageText
-        top={"FLORENSIS"}
-        mid={"Rethinking the entire online ecosystem"}
-      />
+      <ImageText {...text} />
     </StyledDivImageWrapper>
   </StyledImagePartWrapper>
 )

@@ -9,6 +9,8 @@ import { Form } from "../components/Form/Form"
 import {
   quote,
   notes,
+  text,
+  navBarItems,
   Lantern,
   Painting,
   Weirdo,
@@ -34,19 +36,29 @@ const Home: NextPage = () => {
       <Head>
         <title>Dept + Neven</title>
       </Head>
-      <NavBar />
+      <NavBar items={navBarItems} />
       <main>
         <Hero />
         <Filters />
-        <ClientImageImage primaryImage={Summer} secondaryImage={Laptop} />
-        <ClientImageImage primaryImage={Lamps} secondaryImage={Painting} />
-        <ClientNote type={"image-note"} notes={notes} image={Image3} />
-        <ClientImageImage primaryImage={Lantern} secondaryImage={Weirdo} />
-        <ClientNote type={"note-image"} notes={notes} image={Image3} />
-        <ClientImageImage primaryImage={Choko} secondaryImage={Headphones} />
-        <ClientImageImage primaryImage={Board} secondaryImage={Books} />
+        <ClientImageImage images={[Summer, Laptop]} text={text} />
+        <ClientImageImage images={[Lamps, Painting]} text={text} />
+        <ClientNote
+          type={"image-note"}
+          notes={notes}
+          image={Image3}
+          text={text}
+        />
+        <ClientImageImage images={[Lantern, Weirdo]} text={text} />
+        <ClientNote
+          type={"note-image"}
+          notes={notes}
+          image={Image3}
+          text={text}
+        />
+        <ClientImageImage images={[Choko, Headphones]} text={text} />
+        <ClientImageImage images={[Board, Books]} text={text} />
         <Quote {...quote} />
-        <ClientImageImage primaryImage={Servers} secondaryImage={Protein} />
+        <ClientImageImage images={[Servers, Protein]} text={text} />
         <ClientList />
         <Form />
       </main>

@@ -19,6 +19,20 @@ export const quote = {
     "“Dept helped us tell our story through a bold new identity and a robust online experience. To the tone of 60% growth in online bookings in just one month””",
 }
 
+export const text = {
+  mid: "Rethinking the entire online ecosystem",
+  top: "FLORENSIS",
+}
+
+export const navBarItems = [
+  "Work",
+  "Culture",
+  "Services",
+  "Insights",
+  "Careers",
+  "Contact",
+]
+
 export * as Image3 from "/public/images/image_3.png"
 export * as Summer from "/public/images/summer.png"
 export * as Painting from "/public/images/painting.png"

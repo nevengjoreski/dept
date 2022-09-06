@@ -13,15 +13,17 @@ export type INote = {
 type TNoteImage = {
   type: "image-note" | "note-image"
   image: ImageProps["src"]
+  text: IImageText
 } & INote
 
 export type TClientNote = TNoteImage
 
 export type TClientImageImage = {
-  primaryImage: ImageProps["src"]
-  secondaryImage: ImageProps["src"]
+  images: [ImageProps["src"], ImageProps["src"]]
+  text: IImageText
 }
 
 export interface IImageWithText {
   image: ImageProps["src"]
+  text: IImageText
 }

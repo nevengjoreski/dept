@@ -6,19 +6,16 @@ import {
   StyledThreeDots,
 } from "./NavBar.styled"
 
-export const NavBar = () => {
+export const NavBar = ({ items }: { items: Array<string> }) => {
   return (
     <StyledSection>
       <StyledDeptLogoA />
 
       <StyledList>
         <ul>
-          <li>Work</li>
-          <li>Culture</li>
-          <li>Services</li>
-          <li>Insights</li>
-          <li>Careers</li>
-          <li>Contact</li>
+          {items.map((nav) => (
+            <li key={nav}>{nav}</li>
+          ))}
         </ul>
 
         <StyledThreeDots />
